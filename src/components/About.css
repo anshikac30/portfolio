@@ -1,0 +1,38 @@
+.desk-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.about-document {
+  max-width: 500px;
+  position: absolute;
+}
+
+.skills-note {
+  position: absolute;
+  padding: 1.5rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .desk-about {
+    height: auto;
+    flex-direction: column;
+    padding: 10vh 0;
+  }
+  .about-document {
+    position: relative;
+    transform: none !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+  .skills-note {
+    position: relative;
+    transform: none !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin-top: 2rem;
+  }
+}

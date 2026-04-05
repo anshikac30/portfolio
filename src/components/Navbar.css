@@ -1,0 +1,49 @@
+.nav-scrapbook {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.nav-paper {
+  background: var(--paper-white);
+  padding: 0.5rem 2rem;
+  border-radius: 2px;
+  box-shadow: var(--shadow-sm);
+  transform: rotate(1deg);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.nav-btn:hover {
+  color: var(--text-pen);
+}
+
+@media (max-width: 768px) {
+  .nav-paper {
+    padding: 0.5rem 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-btn {
+    font-size: 1.2rem;
+  }
+}

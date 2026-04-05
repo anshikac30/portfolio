@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Desk/Mat Colors */
+  --mat-bg: #1c3d33; /* Deep hunter green cutting mat */
+  --mat-grid: rgba(255, 255, 255, 0.1);
+  --mat-grid-accent: rgba(255, 255, 255, 0.15);
+  
+  /* Scrapbook Elements Palette */
+  --note-yellow: #fde68a;
+  --note-blue: #bfdbfe;
+  --note-pink: #fbcfe8;
+  --paper-white: #fdfbf7;
+  
+  --text-dark: #1f2937;
+  --text-pen: #1e3a8a; /* Blue pen ink */
+  
+  --shadow-sm: 2px 4px 10px rgba(0,0,0,0.15);
+  --shadow-paper: 5px 10px 20px rgba(0,0,0,0.25);
+  --shadow-float: 15px 25px 40px rgba(0,0,0,0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--mat-bg);
+  /* Creating the Cutting Mat Grid */
+  background-image: 
+    linear-gradient(var(--mat-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--mat-grid) 1px, transparent 1px),
+    linear-gradient(var(--mat-grid-accent) 2px, transparent 2px),
+    linear-gradient(90deg, var(--mat-grid-accent) 2px, transparent 2px);
+  background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+  background-position: -1px -1px, -1px -1px, -2px -2px, -2px -2px;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+.handwriting {
+  font-family: 'Caveat', cursive;
+  color: var(--text-pen);
+}
+
+/* Desk Base Container */
+.desk-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 5vw;
+}
+
+/* Scrapbook Common Elements */
+.sticky-note {
+  background: var(--note-yellow);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-paper);
+  transform: rotate(-2deg);
+  cursor: grab;
+  position: absolute;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.sticky-note:active {
+  cursor: grabbing;
+}
+
+.sticky-note.blue { background: var(--note-blue); }
+.sticky-note.pink { background: var(--note-pink); }
+
+.polaroid {
+  background: white;
+  padding: 1rem 1rem 3rem 1rem;
+  box-shadow: var(--shadow-paper);
+  cursor: grab;
+  position: absolute;
+}
+
+.paper-sheet {
+  background: var(--paper-white);
+  padding: 3rem;
+  box-shadow: var(--shadow-paper);
+  border-radius: 2px;
+  cursor: grab;
+}
+
+/* Subtle masking tape effect */
+.tape {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 80px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+}

@@ -1,0 +1,91 @@
+.desk-hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.intro-paper {
+  width: 350px;
+  position: absolute;
+  z-index: 10;
+}
+
+.intro-paper h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  color: #111827;
+}
+
+.intro-paper p {
+  color: #4b5563;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.signature {
+  font-size: 2.5rem;
+  display: block;
+  text-align: right;
+}
+
+.greeting-note {
+  width: 200px;
+  z-index: 15;
+}
+
+.role-note {
+  width: 240px;
+  z-index: 12;
+}
+
+.desk-object {
+  position: absolute;
+  cursor: grab;
+  z-index: 5;
+  filter: drop-shadow(5px 10px 10px rgba(0,0,0,0.3));
+}
+
+.desk-object:active {
+  cursor: grabbing;
+}
+
+.coffee-cup {
+  width: 90px;
+  height: 90px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #e5e7eb;
+}
+
+.hero-polaroid {
+  width: 220px;
+  z-index: 8;
+}
+
+.polaroid-photo {
+  background: #f3f4f6;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.text-center { text-align: center; }
+.mt-2 { margin-top: 10px; }
+
+@media (max-width: 768px) {
+  .intro-paper {
+    width: 300px;
+    top: 20%;
+  }
+  .greeting-note { top: 10%; right: 5%; transform: none !important; }
+  .role-note { top: 60%; left: 5%; }
+  .hero-polaroid { top: 70%; right: 10%; }
+}

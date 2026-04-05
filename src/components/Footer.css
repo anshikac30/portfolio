@@ -1,0 +1,27 @@
+.footer-awwwards {
+  padding-bottom: 2vw;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-light);
+  padding-top: 2vw;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.footer-brand {
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .footer-flex {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
